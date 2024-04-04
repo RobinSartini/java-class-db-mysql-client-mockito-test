@@ -21,6 +21,8 @@ public class ClientRepositoryImpl implements ClientRepository{
         preparedStatement.setDate(3, new java.sql.Date(client.getContactDate().getTime()));
         preparedStatement.setDouble(4, client.getDailyBillAmount());
         int rowsAffected = preparedStatement.executeUpdate();
+        preparedStatement.close();
+        connection.close();
         return rowsAffected > 0;
     }
 
@@ -64,7 +66,7 @@ public class ClientRepositoryImpl implements ClientRepository{
     }
 
     @Override
-    public List<Client> getClientsByDailyAmount() throws ClassNotFoundException, SQLException {
+    public List<Client> getClientsByDailyAmount(double amount) throws ClassNotFoundException, SQLException {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getClientsByDailyAmount'");
     }
