@@ -14,7 +14,7 @@ public interface ClientRepository {
 
     List<Client> getAllClients() throws ClassNotFoundException, SQLException;
 
-    List<Client> getClientsContactDateBetween(Date start, Date end) throws ClassNotFoundException, SQLException;
+    List<Client> getClientsBetweenDates(Date start, Date end) throws ClassNotFoundException, SQLException;
 
     List<Client> getClientsByDailyAmount(double amount) throws ClassNotFoundException, SQLException;
 

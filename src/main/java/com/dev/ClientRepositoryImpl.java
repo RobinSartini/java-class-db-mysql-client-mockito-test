@@ -88,7 +88,7 @@ public class ClientRepositoryImpl implements ClientRepository{
     }
 
     @Override
-    public List<Client> getClientsContactDateBetween(java.util.Date start, java.util.Date end)
+    public List<Client> getClientsBetweenDates(java.util.Date start, java.util.Date end)
             throws ClassNotFoundException, SQLException {
         List<Client> clients = new ArrayList<>();
         ClientDBConfig dbConfig = new ClientDBConfig();
