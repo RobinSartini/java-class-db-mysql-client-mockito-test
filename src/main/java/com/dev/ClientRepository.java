@@ -1,7 +1,7 @@
 package com.dev;
 
-import java.sql.Date;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public interface ClientRepository {
@@ -10,7 +10,7 @@ public interface ClientRepository {
 
     boolean deleteClient(int id);
 
-    boolean updateClient(int id);
+    boolean updateClient(int id, Client client);
 
     List<Client> getAllClients() throws ClassNotFoundException, SQLException;
 
