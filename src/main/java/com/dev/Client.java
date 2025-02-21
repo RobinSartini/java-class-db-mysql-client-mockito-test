@@ -37,5 +37,11 @@ public class Client {
         this.contactDate = contactDate;
         this.dailyBillAmount = dailyBillAmount;
     }
+
+    @Override
+    public String toString() {
+        return "Client [contactDate=" + contactDate + ", dailyBillAmount=" + dailyBillAmount + ", id=" + id + ", name="
+                + name + "]";
+    }
     
 }
