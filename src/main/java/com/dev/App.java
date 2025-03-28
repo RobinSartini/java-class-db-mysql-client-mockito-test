@@ -85,4 +85,24 @@ public class App {
         return clientRepository.addClient(client);
     }
 
+    public static boolean updateClient(int id, Client client, ClientRepository clientRepository)
+            throws ClassNotFoundException, SQLException {
+        return clientRepository.updateClient(id, client);
+    }
+
+    public static boolean deleteClient(int id, ClientRepository clientRepository)
+    throws ClassNotFoundException, SQLException {
+    return clientRepository.deleteClient(id);
+    }
+
+    public static List<Client> getClientsBetweenDates(Date startDate, Date endDate, ClientRepository clientRepository)
+        throws ClassNotFoundException, SQLException {
+    return clientRepository.getClientsBetweenDates(startDate, endDate);
+    }
+
+    public static List<Client> getClientsByDailyAmount(double amount, ClientRepository clientRepository)
+        throws ClassNotFoundException, SQLException {
+    return clientRepository.getClientsByDailyAmount(amount);
+    }
+
 }
